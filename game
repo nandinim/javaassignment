@@ -1,0 +1,60 @@
+
+
+	import java.io.*;
+	import java.util.*;
+	public class game
+	{
+	    public static void main(String args[])
+	    {
+	        String word,flag;
+	        int score=100,count=0,len;
+
+	        Scanner input=new Scanner(System.in);
+	        System.out.println("enter the word");
+	        word=input.nextLine();
+	        len=word.length();
+	        while(score!=0)
+
+	        {
+
+	            System.out.println("enter the letter you think the word may contain");
+	            flag=input.nextLine();
+
+	            if(word.contains(flag))
+	            {
+	                System.out.println("you have guessed right,it does contains a "+flag);
+	                count++;
+	                System.out.println("the score is");
+	                System.out.printf("%d",score);
+	            }
+
+	            else
+	            {
+	                System.out.println("sorry you have guessed wrong");
+	                score=score-10;
+	                System.out.println("the score is");
+	                System.out.printf("%d",score);
+	            }
+	            if(count==len)
+	            {
+	                System.out.println("game over");
+	                break;
+	            }
+	        }
+
+
+
+	    }
+
+
+	}
+
+
+
+
+
+
+
+
+
+
